@@ -156,7 +156,7 @@ section.visible {
   background: var(--primary); /* --darker: #1C1C1C */
 
 }
-
+ 
 #portfolio{
  background: var(--secondary);
 }
