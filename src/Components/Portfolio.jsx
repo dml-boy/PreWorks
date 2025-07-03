@@ -24,10 +24,12 @@ export default function Portfolio() {
   ]
 
   return (
-    <section id="portfolio" className="py-5 bg-dark">
-      <div className="container py-5">
+    <section id="portfolio" 
+    // className="py-5 bg-[--light]"
+    >
+      <div className=" py-5">
         <motion.h2
-          className="text-center fw-bold mb-5 text-light"
+          className="text-center fw-bold mb-5 text-[--light]"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -37,7 +39,7 @@ export default function Portfolio() {
         </motion.h2>
         <div className="row g-4">
           {projects.map((project, index) => (
-            <div key={index} className="col-md-4">
+            <div key={index} className="col-md-6">
               <PortfolioCard
                 title={project.title}
                 description={project.description}

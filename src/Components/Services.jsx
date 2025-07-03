@@ -31,10 +31,17 @@ export default function Services() {
   ]
 
   return (
-    <section id="services" className="py-5 bg-dark">
+    <section id="services" className="py-5   "    style={{
+        background: 'var(--secondary)', // --light: #F5F5F5
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}>
       <div className="container py-5">
         <motion.h2
-          className="text-center fw-bold mb-5 text-light"
+          className="text-center fw-bold mb-5"
+          style={{
+            color: 'var(--primary)'
+          }}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

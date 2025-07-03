@@ -6,27 +6,24 @@ export default function Navbar() {
   const { pathname } = useLocation()
   const [scrolled, setScrolled] = useState(false)
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setScrolled(window.scrollY > 50)
-  //   }
-  //   window.addEventListener('scroll', handleScroll)
-  //   return () => window.removeEventListener('scroll', handleScroll)
-  // }, [])
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <motion.nav
-      className={`navbar navbar-expand-lg fixed-top shadow-sm transition-navbar 
-          `}
+      className={`navbar navbar-expand-lg custom-navbar fixed-top shadow-sm transition-all duration-300 bg-[--secondary] text-[--primary]`} // --light: #F5F5F5, --dark: #0F0F0F
       initial={{ y: -60, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
     >
       <div className="container">
         <Link
-          className={`navbar-brand fw-bold fs-4 ${
-            scrolled ? 'text-dark' : 'text-warning'
-          }`}
+          className="navbar-brand fw-bold fs-4 " // --dark: #0F0F0F
           to="/"
         >
           PreWorks
@@ -56,8 +53,8 @@ export default function Navbar() {
               <li className="nav-item" key={label}>
                 <Link
                   className={`nav-link ${
-                    pathname === path ? 'active-link' : ''
-                  } ${scrolled ? 'text-dark' : 'text-white'}`}
+                    pathname === path ? 'text-[--primary]' : '' // --primary: #009999
+                  } text-[--dark]`} // --dark: #0F0F0F
                   to={path}
                 >
                   {label}

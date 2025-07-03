@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-5 bg-dark">
+    <section id="contact" className="py-5 contact">
       <div className="container py-5">
         <motion.h2
           className="display-5 mb-4 text-light fw-bold text-center"
