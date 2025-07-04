@@ -30,7 +30,8 @@ export default function Hero() {
         if (this.y > canvas.height) this.reset()
       }
       draw() {
-        ctx.fillStyle = `rgba(245, 245, 245, 0.8), ${this.size / 3})` // --primary: #009999
+        ctx.fillStyle = `rgba(0, 153, 153, 1)
+, ${this.size / 3})` // --primary: #009999
         ctx.beginPath()
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
         ctx.fill()
@@ -58,7 +59,7 @@ export default function Hero() {
     <section
       className="relative w-full h-screen overflow-hidden hero-section"
       style={{
-        background: 'var(--secondary)', // --light: #F5F5F5
+        background: 'var(--light)', // --light: #F5F5F5
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
@@ -79,10 +80,11 @@ export default function Hero() {
             Creative Tech Solutions
           </motion.h1>
           <motion.p
-            className="hero-subtitle text-[--light]" // --light: #F5F5F5 with opacity
+            className="hero-subtitle " // --light: #F5F5F5 with opacity
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
+            style={{ color: 'var(--secondary)' }} // --secondary: #666666
           >
             Transforming ideas into impactful digital products
           </motion.p>
@@ -94,7 +96,8 @@ export default function Hero() {
           >
             <Link
               to="/contact"
-              className="btn btn-primary px-6 py-3 rounded-full shadow-lg text-[--light] bg-[--primary] hover:bg-[--primary-hover]" // --primary: #009999, --primary-hover: #007777, --light: #F5F5F5
+              className="btn  px-6 py-3 rounded-full shadow-lg "
+              style={{ color: 'var(--light)', backgroundColor: 'var(--primary)', hover: { backgroundColor: 'var(--primary-hover)' } }}
             >
               Start Your Project
             </Link>

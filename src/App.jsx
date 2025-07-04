@@ -38,7 +38,8 @@ export default function App() {
       </motion.div>
      
      
-      <Hero />     
+      <Hero /> 
+      <About />    
       <Services />
       <Portfolio />
       <Contact />

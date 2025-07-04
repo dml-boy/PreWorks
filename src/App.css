@@ -20,7 +20,7 @@ body {
 /* ===== Navbar ===== */
 .navbar,
 .custom-navbar {
-  background: var(--secondary); /* --light: #F5F5F5 */
+  background: var(--light); /* --light: #F5F5F5 */
   padding: 1rem 0;
   transition: background 0.4s ease;
   border-bottom: 1px solid rgba(15, 15, 15, 0.1); /* --dark: #0F0F0F with opacity */
@@ -158,15 +158,15 @@ section.visible {
 }
  
 #portfolio{
- background: var(--secondary);
+ background: var(--light);
 }
 .contact{
  background: var(--secondary);
 }
 /* ===== Utilities ===== */
-.bg-dark { background-color: var(--dark) !important; }
+/* .bg-dark { background-color: var(--dark) !important; }
 .bg-darker { background-color: var(--darker) !important; }
-.text-light { color: var(--light) !important; }
+.text-light { color: var(--light) !important; } */
 
 /* ===== Media Queries ===== */
 @media (max-width: 768px) {

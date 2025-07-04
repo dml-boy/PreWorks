@@ -44,7 +44,7 @@ export default function About() {
   ]
 
   return (
-    <section id="about" className="py-5 bg-dark">
+    <section id="about" className="py-5 " style={{ backgroundColor: 'var(--light)' }}>
       <div className="container py-5">
         {/* Mission Section */}
         <motion.div
@@ -54,8 +54,8 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="display-5 fw-bold text-light mb-4">Who We Are</h2>
-          <p className="lead text-muted mx-auto" style={{ maxWidth: '600px' }}>
+          <h2 className="display-5 fw-bold mb-4" style={{ color: 'var(--secondary)' }}>Who We Are</h2>
+          <p className="lead  mx-auto" style={{ maxWidth: '600px', color: 'var(--primary)' }}>
             PreWorks is a creative tech agency dedicated to transforming ideas into impactful digital products through user-first solutions, bold design, and scalable development.
           </p>
         </motion.div>

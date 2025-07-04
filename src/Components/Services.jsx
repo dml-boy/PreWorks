@@ -32,7 +32,7 @@ export default function Services() {
 
   return (
     <section id="services" className="py-5   "    style={{
-        background: 'var(--secondary)', // --light: #F5F5F5
+        background: 'var(--light)', // --light: #F5F5F5
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}>
